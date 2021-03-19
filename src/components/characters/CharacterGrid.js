@@ -2,7 +2,9 @@ import React from "react";
 import CharacterItem from "./CharacterItem";
 import Spinner from "../ui/Spinner";
 
-const CharacterGrid = ({ isLoading, items }) => {
+const CharacterGrid = (props) => {
+  const { isLoading, items } = props;
+  console.log("CharacterGrid=>", props);
   return isLoading ? (
     <Spinner />
   ) : (

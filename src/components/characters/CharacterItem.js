@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CharacterItem = ({ item }) => {
+  const [queryName, setQueryName] = useState("");
+
+  useEffect(() => {
+    const kamalName = item.name.replace(" ", "+");
+
+    setQueryName(kamalName);
+  }, [item]);
+
   return (
     <div className="card">
       <div className="card-inner">
@@ -23,6 +32,16 @@ const CharacterItem = ({ item }) => {
               <strong>Status:</strong> {item.status}
             </li>
           </ul>
+          <div
+            style={{
+              paddingTop: "10px",
+              textDecoration: "underline",
+            }}
+          >
+            <Link to={`/character/${queryName}`} style={{ color: "white" }}>
+              See {item.name}'s complete profile
+            </Link>
+          </div>
         </div>
       </div>
     </div>

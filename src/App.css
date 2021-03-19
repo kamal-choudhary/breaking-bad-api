@@ -121,6 +121,71 @@ input[type="text"] {
   padding-bottom: 10px;
 }
 
+.quote-card {
+  background-color: #333;
+  height: 70px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 3px green solid;
+}
+
+.kamal-links {
+  margin-left: 20px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid rgb(33, 66, 32);
+}
+
+.kamal-links a {
+  padding: 10px;
+  color: rgb(33, 66, 32);
+  cursor: pointer;
+}
+
+.all-series-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2px;
+}
+
+.single-series-card {
+  height: 150px;
+  background-color: #14341d;
+  padding: 50px;
+  margin: 20px;
+}
+
+.single-series-card a {
+  color: white;
+  font-size: x-large;
+}
+
+.colored-card {
+  padding: 50px;
+  margin: 20px;
+  background-color: #333;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.colored-card h1 {
+  font-size: 50px;
+}
+
+.episode-list-grid {
+  background-color: #333;
+  padding: 20px;
+}
+
+.all-series-cards-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2px;
+}
+
 @media (max-width: 800px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
